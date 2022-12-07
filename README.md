@@ -1,0 +1,1 @@
+# kata-winside-solid
