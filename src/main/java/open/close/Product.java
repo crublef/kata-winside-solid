@@ -1,9 +1,9 @@
 package open.close;
 
-public class Product {
+public abstract class Product {
 
     private final String name;
-    private final double price;
+    protected final double price;
     private final String type;
 
     public Product(String name, double price, String type) {
@@ -21,4 +21,6 @@ public class Product {
     public String getType() {
         return type;
     }
+
+    public abstract double calculatePrice();
 }

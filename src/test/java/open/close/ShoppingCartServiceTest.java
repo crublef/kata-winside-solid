@@ -15,7 +15,7 @@ public class ShoppingCartServiceTest {
     public void calculate_total_order_of_food() {
         // Given
         List<Product> products = Collections.singletonList(
-                new Product("Barre de chocolat", 0.65d, "FOOD")
+                new Food("Barre de chocolat", 0.65d, "FOOD")
         );
         // Test
         double totalOrderExpected = shoppingCartService.calculateTotalOrder(products);
@@ -27,7 +27,7 @@ public class ShoppingCartServiceTest {
     public void calculate_total_order_of_car() {
         // Given
         List<Product> products = Collections.singletonList(
-                new Product("Tesla model S", 42000d, "CAR")
+                new Car("Tesla model S", 42000d, "CAR")
         );
         // Test
         double totalOrderExpected = shoppingCartService.calculateTotalOrder(products);
@@ -39,7 +39,7 @@ public class ShoppingCartServiceTest {
     public void calculate_total_order_of_electronics() {
         // Given
         List<Product> products = Collections.singletonList(
-                new Product("Apple iPhone 14 pro max 256Go", 1250d, "Electronics")
+                new Electronics("Apple iPhone 14 pro max 256Go", 1250d, "Electronics")
         );
         // Test
         double totalOrderExpected = shoppingCartService.calculateTotalOrder(products);
