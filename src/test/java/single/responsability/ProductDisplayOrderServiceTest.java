@@ -7,10 +7,10 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class ProductServiceTest {
+public class ProductDisplayOrderServiceTest {
 
-    private final ProductService productService = new ProductService();
 
+    private final ProductDisplayOrderService productDisplayOrderService = new ProductDisplayOrderService(new ProductCalculateOrderService());
     @Test
     public void display_the_order_total() {
         // Given
@@ -20,10 +20,12 @@ public class ProductServiceTest {
         );
 
         // Test
-        String expected = productService.displayAllOrder(products);
+        String expected = productDisplayOrderService.displayAllOrder(products);
 
         // Assert
         assertEquals("Barre de chocolat: 0.65" + "\nBarre de céréales: 0.68\ntotal: 1.33", expected);
 
     }
+
+
 }
