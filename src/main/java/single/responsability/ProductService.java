@@ -8,7 +8,7 @@ public class ProductService {
         String result = "";
         for (Product product : products) {
             orderTotal = orderTotal + product.getPrice();
-            result = result + product.getName() + ": " + product.getPrice() + System.getProperty("line.separator");
+            result = result + product.getName() + ": " + product.getPrice() + "\n";
         }
         return result + "total: " + orderTotal;
     }
