@@ -1,19 +1,17 @@
 package dependency.inversion;
 
-public abstract class Product {
+public abstract class Product implements  IPrintable{
 
     protected String name;
     protected double price;
 
-    protected ProductPrinter productPrinter;
+    protected IPrinter printer;
 
-    protected Product(String name, double price, ProductPrinter productPrinter) {
+    protected Product(String name, double price, IPrinter printer) {
         this.name = name;
         this.price = price;
-        this.productPrinter = productPrinter;
+        this.printer = printer;
     }
 
-    protected void print(String text) {
-        this.productPrinter.print(text);
-    }
+
 }

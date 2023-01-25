@@ -5,4 +5,9 @@ public class Phone extends Product {
     protected Phone(String name, double price) {
         super(name, price, new ProductPrinter());
     }
+
+    @Override
+    public void print() {
+        this.printer.print("Phone has been added to cart");
+    }
 }
