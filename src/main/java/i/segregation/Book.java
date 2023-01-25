@@ -1,16 +1,9 @@
 package i.segregation;
 
-public class Book implements IProduct {
-
-
+public class Book implements IReadable, IAddable {
     @Override
-    public boolean readable() {
+    public boolean read() {
         return false;
-    }
-
-    @Override
-    public void swipe() {
-        throw new UnsupportedOperationException("swipe is not supported");
     }
 
     @Override

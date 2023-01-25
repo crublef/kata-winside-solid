@@ -1,12 +1,7 @@
 package i.segregation;
 
-public class Phone implements IProduct {
+public class Phone implements ISwipeable, IAddable {
 
-
-    @Override
-    public boolean readable() {
-        throw new UnsupportedOperationException("A phone is not readable");
-    }
 
     @Override
     public void swipe() {
